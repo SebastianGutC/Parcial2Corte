@@ -1,0 +1,26 @@
+// CREACIÓN BASE DE DATOS
+
+CREATE DATABASE gestionparqueadero
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LOCALE_PROVIDER = 'libc'
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+// ALIMENTACIÓN TABLA rol:
+
+INSERT INTO public.rol (rol_id, nombre)
+VALUES 
+    (1, 'ROLE_ADMINISTRADOR'),
+    (2, 'ROLE_ACOMODADOR'),
+    (3, 'ROLE_CLIENTE');
+
+//ALIMENTACIÓN TABLA tipo_vehiculo:
+
+INSERT INTO public.tipo_vehiculo(id, modelo)
+	VALUES (1, 'AUDI'),
+	       (2, 'CHEVROLET'),
+	       (3, 'BMW'),
+	       (4, 'FORD'),
+	       (5, 'JEEP');
